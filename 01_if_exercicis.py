@@ -8,6 +8,7 @@
 # - Entre -67 dBm i menys de -50 dBm: bona
 # - Entre -75 dBm i menys de -67 dBm: feble
 # - Inferior a -75 dBm: molt feble
+RSSI = float(input("Introdueix el nivell de senyal rebut (RSSI) en dBm: "))
 if RSSI >= -50:
     print("La cobertura és excel·lent")
 elif RSSI >= -67:
@@ -173,3 +174,16 @@ else:
 # d'usuaris. Assigna prioritat crítica si afecta un servei crític i no hi ha
 # alternativa, o si afecta almenys 50 usuaris i no hi ha alternativa; alta si
 # afecta almenys 10 usuaris o un servei crític; en qualsevol altre cas, baixa.
+
+critic = input("La incidència afecta un servei crític? (s/n): ") == "s"
+usuaris = int(input("Nombre d'usuaris afectats: "))
+alternativa = input("Hi ha una alternativa de connexió disponible? (s/n): ") == "s"
+
+if usuaris < 0:
+    print("Nombre d'usuaris negatiu no vàlid")
+elif (critic or usuaris >= 50) and not alternativa:
+    print("Prioritat crítica")
+elif usuaris >= 10 or critic:
+    print("Prioritat alta")
+else:
+    print("Prioritat baixa")
