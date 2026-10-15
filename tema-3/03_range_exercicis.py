@@ -22,10 +22,23 @@ for n in range(5, 51, 5):
 
 # Exercici 4: Imprimir números en ordre invers
 # Imprimeix els números del 10 a l'1 (inclosos) en ordre invers fent servir un bucle for i range().
-
+for n in range(10, 0, -1):
+    print(n)
 # Exercici 5: Suma de números en un rang
 # Calcula la suma dels números de l'1 al 100 (inclosos) fent servir un bucle for i range().
+
+suma = 0
+
+for n in range(1, 101):
+    suma = suma + n
+
+print(f"La suma dels números de l'1 al 100 és {suma}")
 
 # Exercici 6: Taula de multiplicar
 # Demana a l'usuari que introdueixi un número.
 # Imprimeix la taula de multiplicar d'aquest número (de l'1 al 10) fent servir un bucle for i range().
+
+numero = int(input("Introdueix un número: "))
+
+for n in range(1, 11):
+    print(f"{numero} x {n} = {numero * n}")
