@@ -1,5 +1,5 @@
 ###
-# EXERCICIS
+# EXERCICIS hola
 ###
 
 # Exercici 1: Qualitat del senyal Wi-Fi
