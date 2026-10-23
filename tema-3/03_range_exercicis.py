@@ -1,5 +1,5 @@
 ###
-# EXERCICIS (range)holaa
+# EXERCICIS (range)
 ###
 
 # Exercici 1: Imprimir números de l'1 al 10
@@ -7,6 +7,7 @@
 
 for n in range(1, 11):
     print(n)
+    print("Hola")  # Aquesta línia imprimeix "Hola" després de cada número
 
 # Exercici 2: Imprimir números senars de l'1 al 20
 # Imprimeix tots els números senars entre 1 i 20 (inclosos) fent servir un bucle for i range().
